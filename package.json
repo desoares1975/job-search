@@ -1,0 +1,35 @@
+{
+  "name": "job-search-api",
+  "version": "0.0.1",
+  "description": "pagination api",
+  "main": "job-search.js",
+  "scripts": {
+    "test": "nodemon --exec mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/desoares1975/job-search.git"
+  },
+  "keywords": [
+    "none"
+  ],
+  "author": "desoares1975",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/desoares1975/job-search/issues"
+  },
+  "homepage": "https://github.com/desoares1975/job-search#readme",
+  "devDependencies": {
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.8",
+    "supertest": "^3.3.0"
+  },
+  "dependencies": {
+    "basic-auth": "^2.0.1",
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "helmet": "^3.15.0",
+    "request-promise": "^4.2.2"
+  }
+}
