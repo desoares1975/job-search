@@ -44,11 +44,13 @@ app.listen(
 
 app.get('/', (req, res) => res.status(200).send('OK'));
 app.post('/search', (req, res) => {
-  let { description, location } = req.body;
+  let { description, location, fullTime } = req.body;
+  let onlyFull = (fullTime === true ? '&full_time=true' : '');
+
   return request.get(
     `${process.env.GITHUB_JOBS_API_URL}?description=${description ?
       description.split(' ').join('+') : ''}&location=${location ?
-      location.split(' ').join('+') : ''}`
+      location.split(' ').join('+') : ''}${onlyFull}`
   )
     .then(response => {
       let data = (() => {
